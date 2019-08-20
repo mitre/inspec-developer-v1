@@ -8,7 +8,7 @@ module.exports = {
         navbar: 'auto',
         nav: [{
                 text: 'Course',
-                link: '/course/README.md'
+                link: '/course/'
             },
             {
                 text: 'Install',

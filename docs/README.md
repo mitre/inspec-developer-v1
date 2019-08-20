@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: Get Started with InSpec →
-actionLink: course/README.md
+actionLink: course/
 features:
   - title: Describe the InSpec framework and its capabilities
     details: Create components, connected components, modules - and their tests - right from the CLI
