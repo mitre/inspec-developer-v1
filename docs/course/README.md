@@ -342,7 +342,8 @@ inspec> file('/tmp').class.superclass.instance_methods(false).sort
 You can use the arrow or Page Up and Page Down keys to scroll through the list. When you're done, press `Q`.
 
 ```bash
-InSpec shell is based on a tool called pry. If you're not familiar with pry or other REPL tools, later you can check out pry to learn more.
+InSpec shell is based on a tool called pry. If you're not familiar with pry or
+other REPL tools, later you can check out pry to learn more.
 ```
 
 As an example, call the `file.directory?` method.
@@ -374,9 +375,11 @@ inspec> end
 In practice, you don't typically run controls interactively, but it's a great way to test out your ideas.
 
 ```bash
-A Ruby method that ends in ?, such as directory? is known as a predicate method. The ? syntax is intended to make Ruby code easier to read.
+A Ruby method that ends in ?, such as directory? is known as a predicate method.
+The ? syntax is intended to make Ruby code easier to read.
 
-A predicate method typically returns a value that can be evaluated as true or false. In Ruby, false and nil are false; everything else evaluates to true.
+A predicate method typically returns a value that can be evaluated as true or
+false. In Ruby, false and nil are false; everything else evaluates to true.
 ```
 
 ### 4.3. Explore the nginx resource
