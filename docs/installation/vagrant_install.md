@@ -1,29 +1,29 @@
-# 7. Course Environment Setup
-## 7.1. Download and Install VirtualBox
+#  Course Environment Setup
+##  Download and Install VirtualBox
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-## 7.2. Download and Install Vagrant
+##  Download and Install Vagrant
 [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
 
-## 7.3. Clone or Download-Unzip This Course Repository
+##  Clone or Download-Unzip This Course Repository
 [https://github.com/mitre/inspec_training_courses](https://github.com/mitre/inspec_training_courses)
 
 
 
-## 7.4. Setup Environments
+##  Setup Environments
 Start by creating a working directory. We recommend ~/learn-inspec.  
 `mkdir ~/learn-inspec`  [or from Windows cmd prompt: `mkdir Desktop/learn-inspec`]
 
 Next, move to your working directory.  
 `cd ~/learn-inspec`  [or from Windows cmd prompt: `cd Desktop/learn-inspec`]
 
-### 7.4.1. Run Vagrant to install the Virtual Environment
+###  Run Vagrant to install the Virtual Environment
 Navigate to the `InSpec 102 Dev` folder and run the following command:  
 `$ vagrant up`
 
 Wait for vagrant to finish standing up the virtual environments.
 
-### 7.4.2. Setup network in VirtualBox
+###  Setup network in VirtualBox
 Open VirtualBox and shut down the 3 vm's that were created `workstation`, `target`, `target-centos6`.
 
 Open Preference settings for VirtualBox (**not** the settings for the VM's)

@@ -2,15 +2,34 @@
 const dirTree = require('directory-tree');
 const path = require('path');
 
-var courses = [];
-dirTree(path.join(__dirname, '../course'), {extensions:/\.md/}, (item, PATH) => courses.push(item));
-courses = courses.map(children => {
-    return path.parse(children.name).name  !== 'README' ? 
-      path.join.apply(null, children.path.split(path.sep).slice(7)) : 
-      path.join.apply(null, children.path.split(path.sep).slice(7)).replace('README.md', '');
-});
 
-console.log(courses);
+// Returns an array of file basenames in subDirPath, due to the usage of
+// __dirname paths must be relative to the path of the file running this
+function sidebarChildren(subDirPath) 
+{
+    var files = [];
+    dirTree(path.join(__dirname, subDirPath)
+          ,{extensions:/\.md/}
+          ,(item, PATH) => files.push(item));
+
+    // extract file basenames so we can sort by number
+    files = files.map(children => {
+        return path.join.apply(null, children.path.split(path.sep).slice(7)).slice(0,-3);
+    });
+    
+    files.sort(
+        (a,b) => {
+            if (Number(a) && Number(b))
+            {
+                return a - b;
+            } else {
+                return a.localeCompare(b);
+            }
+        } 
+    ); 
+    return files;
+}
+
 module.exports = {
 
     title: 'InSpec Profile Developers Course',
@@ -22,12 +41,13 @@ module.exports = {
 
     themeConfig: {
         sidebar: {
-          '/course/': courses
+          '/course/': sidebarChildren('../course'),
+          '/installation/': sidebarChildren('../installation')
         },
         navbar: 'auto',
         nav: [{
                 text: 'Course',
-                link: '/course/'
+                link: '/course/1.md'
             },
             {
                 text: 'Install',
@@ -55,7 +75,7 @@ module.exports = {
             },
             {
                 text: 'Contact',
-                link: 'contact.md'
+                link: '/contact'
             },
         ],
     },
