@@ -1,10 +1,29 @@
+// See https://github.com/vuejs/vuepress/issues/613 for below example code source
+const dirTree = require('directory-tree');
+const path = require('path');
+
+var courses = [];
+dirTree(path.join(__dirname, '../course'), {extensions:/\.md/}, (item, PATH) => courses.push(item));
+courses = courses.map(children => {
+    return path.parse(children.name).name  !== 'README' ? 
+      path.join.apply(null, children.path.split(path.sep).slice(7)) : 
+      path.join.apply(null, children.path.split(path.sep).slice(7)).replace('README.md', '');
+});
+
+console.log(courses);
 module.exports = {
 
     title: 'InSpec Profile Developers Course',
     description: "The MITRE InSpec Team's introduction to InSpec Profile Development",
 
+    plugins: [
+      "vuepress-bar"
+    ],
+
     themeConfig: {
-        sidebar: 'auto',
+        sidebar: {
+          '/course/': courses
+        },
         navbar: 'auto',
         nav: [{
                 text: 'Course',
