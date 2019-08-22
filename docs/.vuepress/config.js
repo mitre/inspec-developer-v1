@@ -16,6 +16,9 @@ function sidebarChildren(subDirPath)
     files = files.map(children => {
         return path.join.apply(null, children.path.split(path.sep).slice(7)).slice(0,-3);
     });
+
+    files = files.filter((file) => !(/README/g.test(file)));
+    console.error(files)
     
     files.sort(
         (a,b) => {
