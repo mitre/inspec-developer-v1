@@ -8,16 +8,17 @@ const path = require('path');
 function sidebarChildren(subDirPath) 
 {
     var files = [];
-    dirTree(path.join(__dirname, subDirPath)
+    dirTree(path.join('docs/', subDirPath)
           ,{extensions:/\.md/}
           ,(item, PATH) => files.push(item));
 
     // extract file basenames so we can sort by number
     files = files.map(children => {
-        return path.join.apply(null, children.path.split(path.sep).slice(7)).slice(0,-3);
+        return path.join.apply(null, children.path.split(path.sep).slice(2)).slice(0,-3);
     });
 
     files = files.filter((file) => !(/README/g.test(file)));
+    console.error("sidebarData")
     console.error(files)
     
     files.sort(
@@ -44,8 +45,8 @@ module.exports = {
 
     themeConfig: {
         sidebar: {
-          '/course/': sidebarChildren('../course'),
-          '/installation/': sidebarChildren('../installation')
+          '/course/': sidebarChildren('./course'),
+          '/installation/': sidebarChildren('./installation')
         },
         navbar: 'auto',
         nav: [{
