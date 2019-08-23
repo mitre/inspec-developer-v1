@@ -10,6 +10,7 @@
 ## Orchestration, Configuration Management, Validation to Deployment
 
 InSpec operates with most orchestration and CM tools found in the DevOps pipeline implementations
+
 ![Alt text](../images/InSpec_Orchestration.png?raw=true "InSpec Orchestration")
 
 ---
