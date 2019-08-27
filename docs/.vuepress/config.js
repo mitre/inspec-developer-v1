@@ -14,13 +14,14 @@ function sidebarChildren(subDirPath)
 
     // extract file basenames so we can sort by number
     files = files.map(children => {
-        return path.join.apply(null, children.path.split(path.sep).slice(2)).slice(0,-3);
+        fileName = path.join.apply(null, children.path.split(path.sep).slice(2)).slice(0,-3)
+        return /README/g.test(fileName) ? '' : fileName ;
     });
 
-    files = files.filter((file) => !(/README/g.test(file)));
     console.error("sidebarData")
     console.error(files)
     
+    // Text based file names go first
     files.sort(
         (a,b) => {
             if (Number(a) && Number(b))
@@ -48,10 +49,11 @@ module.exports = {
           '/course/': sidebarChildren('./course'),
           '/installation/': sidebarChildren('./installation')
         },
+        sidebarDepth: 4,
         navbar: 'auto',
         nav: [{
                 text: 'Course',
-                link: '/course/1.md'
+                link: '/course/'
             },
             {
                 text: 'Install',
@@ -69,7 +71,7 @@ module.exports = {
                     },
                     {
                         text: 'Vagrant Install',
-                        link: '/installation/vagrant_install.md'
+                        link: '/installation/'
                     }
                 ],
             },
