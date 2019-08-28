@@ -31,7 +31,7 @@ Open Preference settings for VirtualBox (**not** the settings for the VM's)
 - From there click the + symbol to add a new NatNetwork
 - Once you do that your preferences should look like this below:
 
-![Alt text](../../images/Create_NatNetwork.png?raw=true "Create NatNetwork")
+![Alt text](/Create_NatNetwork.png)
 
 Click ok to save the settings.
 
@@ -44,25 +44,25 @@ The following step you will repeat for the 3 vm's `workstation`, `target`, `targ
  - Click on Advanced dropdown and For `Promiscuous Mode:` make sure to select `Allow VMs`
  - Once you do these steps your preferences should look like this below:
 
-![Alt text](../../images/NatNetwork_VM_Setup.png?raw=true "NatNetwork VM Setup")
+![Alt text](/NatNetwork_VM_Setup.png)
 
  - Next you need to Select the Shared Folders
  - Click the + symbol to add a new Shared Folder
 
-![Alt text](../../images/Add_Shared_Folder.png?raw=true "Add Shared Folder")
+![Alt text](/Add_Shared_Folder.png)
 
  - For Folder Path select the dropdown and select `Other`, navigate to your `~/learn-inspec` folder and select that
 
-![Alt text](../../images/Select_Shared_Folder.png?raw=true "Select Shared Folder")
+![Alt text](/Select_Shared_Folder.png)
 
  - Select the checkbox for Auto-mount
 
-![Alt text](../../images/Configure_Shared_Folder.png?raw=true "Configure Shared Folder")
+![Alt text](/Configure_Shared_Folder.png)
 
  - Click ok to confirm the shared folder.
  - Once you do these steps your preferences should look like this below:
 
-![Alt text](../../images/Final_Shared_Folder.png?raw=true "Final Shared Folder")
+![Alt text](/Final_Shared_Folder.png)
 
  - Once more click ok to confirm and save the settings
 

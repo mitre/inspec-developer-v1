@@ -15,16 +15,16 @@ next: ./2
 
 InSpec operates with most orchestration and CM tools found in the DevOps pipeline implementations
 
-![Alt text](../images/InSpec_Orchestration.png?raw=true "InSpec Orchestration")
+![Alt text](/InSpec_Orchestration.png)
 
 ---
 
 ## 1.2 Automating Security Validation Using InSpec
 
-![Alt text](../images/Automating_Security_Validation.png?raw=true "Automating Security Validation")
+![Alt text](/Automating_Security_Validation.png)
 
 ---
 
 ## 1.3 Processing InSpec Results
 
-![Alt text](../images/Processing_InSpec_Results.png?raw=true "Processing InSpec Results")
+![Alt text](/Processing_InSpec_Results.png)
