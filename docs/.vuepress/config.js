@@ -68,10 +68,6 @@ module.exports = {
                     {
                         text: 'Windows',
                         link: '/installation/WindowsInstall.md'
-                    },
-                    {
-                        text: 'Vagrant Install',
-                        link: '/installation/'
                     }
                 ],
             },
