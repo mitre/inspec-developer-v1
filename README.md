@@ -22,7 +22,7 @@ footer: Apache-2.0 | Copyright © 2019 - The MITRE Corporation
 
 ### NOTICE
 
-© 2019-2021 The MITRE Corporation.
+© 2019-2022 The MITRE Corporation.
 
 Approved for Public Release; Distribution Unlimited. Case Number 18-3678.
 
