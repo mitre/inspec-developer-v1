@@ -1,8 +1,5 @@
 name: Deploy to GitHub Pages
 
-env:
-  GITHUB_DEPLOY: true
-
 on:
   release:
     types:
@@ -20,5 +17,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_REPO: mitre/inspec-developer
           TARGET_BRANCH: gh_pages
-          BUILD_SCRIPT: npm ci && npm run docs:build
+          BUILD_SCRIPT: npm ci && cross-env GITHUB_DEPLOY=true npm run docs:build
           BUILD_DIR: docs/.vuepress/dist/
