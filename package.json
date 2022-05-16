@@ -5,13 +5,14 @@
     "directory-tree": "^2.2.4",
     "global": "^4.3.2",
     "html-server": "^0.1.1",
+    "cross-env": "^7.0.3",
     "vuepress": "^1.0.2"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
     "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1"
   },
-"scripts": {
+  "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
