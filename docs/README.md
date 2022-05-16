@@ -4,9 +4,7 @@ actionText: Get Started with InSpec →
 actionLink: course/
 features:
   - title: Pre-requisites for the course
-    details: For this basic class, knowledge of basic programming concepts, modern language conventions and some working experience with a modern language (e.g., ruby, python, go, etc) is useful. (Inspec is a Ruby Domain-specific language (DSL)). To become more familiar with Ruby, feel free to review the following Ruby primers
-    https://www.ruby-lang.org/en/documentation/quickstart/
-    https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en
+    details: For this basic class, knowledge of basic programming concepts, modern language conventions and some working experience with a modern language (e.g., ruby, python, go, etc) is useful. (Inspec is a Ruby Domain-specific language (DSL)). To become more familiar with Ruby, feel free to review the following Ruby primers https://www.ruby-lang.org/en/documentation/quickstart/ https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en
   - title: Describe the InSpec framework and its capabilities
     details: Create components, connected components, modules - and their tests - right from the CLI
   - title: Describe the architecture of an InSpec profile
