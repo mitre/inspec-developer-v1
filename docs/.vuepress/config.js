@@ -36,6 +36,9 @@ function sidebarChildren(subDirPath)
 }
 
 module.exports = {
+    markdown: {
+      lineNumbers: true
+    },
     base: process.env.GITHUB_DEPLOY === "true" ? "/inspec-developer/" : "/",
     title: 'InSpec Profile Developers Course',
     description: "The MITRE InSpec Team's introduction to InSpec Profile Development",
