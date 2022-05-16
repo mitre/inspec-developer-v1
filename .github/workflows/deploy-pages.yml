@@ -1,13 +1,9 @@
 name: Deploy to GitHub Pages
 
-env:
-  - GITHUB_DEPLOY=true
-
 on:
   release:
     types:
       - published
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -17,6 +13,7 @@ jobs:
       - name: Build and Deploy
         uses: jenkey2011/vuepress-deploy@master
         env:
+          GITHUB_DEPLOY: true
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_REPO: mitre/inspec-developer
           TARGET_BRANCH: gh_pages
