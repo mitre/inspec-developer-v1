@@ -9,9 +9,11 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
+    "cross-env": "^7.0.3",
     "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1"
   },
-  "scripts": {
-    "docs:build": "vuepress build docs"
+"scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "cross-env NODE_ENV=production vuepress build docs"
   }
 }
