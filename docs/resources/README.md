@@ -54,8 +54,6 @@ To create the RedHat Enterprise Linux 8 STIG Profile stubs, we used the `saf-cli
 saf generate:xccdf2inspec_stub -i U_RHEL_8_STIG_V1R6_Manual-xccdf.xml -r -o rhel8-baseline-stubs
 ```
 This created a starter profile based of the RHEL8 STIG XCCDF Bechmark
-
-[asdlfkj](./rhel8-baseline-stubs/)
 ## MITRE SAF InSpec Profiles
 
 - [MITRE InSpec Profile Repositories](https://github.com/mitre?q=inspec+baseline+profile)
