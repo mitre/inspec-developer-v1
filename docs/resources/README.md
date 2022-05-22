@@ -45,7 +45,7 @@
 
 The RHEL8 Baseline Stubs were `saf-cli generate` command as documented in [Section 10](../course/10.md) . You can use this as a reference while you develop your controls.
 
-- [rhel8-baseline-stubs.tar.gz](./rhel8-baseline-stubs.tar.gz)
+- [rhel8-baseline-stubs.tar.gz](rhel8-baseline-stubs.tar.gz)
 
 ### Generating the Stubs
 
