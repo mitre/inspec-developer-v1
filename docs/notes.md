@@ -7,6 +7,5 @@
 
 ## Themes
 
-- https://vuepress-examples.netlify.com/ 
+- https://vuepress-examples.netlify.com/
 - https://friendlyuser.github.io/vuepress-theme-cool-starter/admonitions.html#examples
-- 

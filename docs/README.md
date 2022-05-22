@@ -7,7 +7,7 @@ footer: Apache-2.0 | Copyright © 2022 - The MITRE Corporation
 
 <div style="text-align: center">
   <Bit/>
-  <h3><strong>Suggested Pre-Requisites</strong></h3><p>Basic familiarity with Ruby, RSpec and InSpec. InSpec is a DSL built on top of Ruby and RSpec. To become more familiar with Ruby, review the following this <a href="https://www.ruby-lang.org/en/documentation/quickstart/">written ruby primer</a> and or <a href="https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en">a basic video introduction</a> to get started.</p>
+  <h3><strong>Suggested Pre-Requisites</strong></h3><p>Basic familiarity with Ruby, RSpec and InSpec. InSpec is a DSL built on top of Ruby and RSpec. To become more familiar with Ruby, review the following this <a href="https://ruby-for-beginners.rubymonstas.org/">written ruby primer</a> and or <a href="https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en">a basic video introduction</a> to get started.</p>
 </div>
 
 <div class="features">

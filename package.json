@@ -2,16 +2,19 @@
   "dependencies": {
     "@vuepress/core": "^1.0.2",
     "@vuepress/theme-default": "^1.0.2",
+    "cross-env": "^7.0.3",
     "directory-tree": "^3.2.2",
     "global": "^4.3.2",
     "html-server": "^0.1.1",
-    "cross-env": "^7.0.3",
     "vuepress": "^1.0.2"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
     "cross-env": "^7.0.3",
-    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1"
+    "markdown-it-vuepress-code-snippet-enhanced": "^1.0.1",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-smooth-scroll": "^0.0.10",
+    "vuepress-theme-yuu": "^3.1.1"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

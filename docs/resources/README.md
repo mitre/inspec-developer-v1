@@ -1,13 +1,77 @@
 # Class Resources
+## Code Background & Primers
+### Ruby Tutorials and Documentation
 
-## RHEL6 Baseline 'Stubs'
+- <https://ruby-for-beginners.rubymonstas.org/>
+- [Ruby Video Tutorial](https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en")
+### InSpec Documentation
 
-The RHEL6 Baseline Stubs were producted by the `inspec_tools` from the DISA RHEL6 STIG XCCDF file. You can use these to get a jumpstart on your profile's controls.
+- [InSpec Docs](https://www.inspec.io/docs/)
+- [InSpec Profiles](https://www.inspec.io/docs/reference/profiles/)
+- [InSpec Resources](https://www.inspec.io/docs/reference/resources/)
+- [InSpec Matchers](https://www.inspec.io/docs/reference/matchers/)
+- [InSpec Shell](https://www.inspec.io/docs/reference/shell/)
+- [InSpec Reporters](https://www.inspec.io/docs/reference/reporters/)
+- [InSpec Profile Inheritance](https://blog.chef.io/2017/07/06/understanding-inspec-profile-inheritance/)
+### InSpec Tutorials and Videos
 
-- [rhel6-baseline.zip](./rhel6-baseline.zip)
+- [Introduction to InSpec Playlist](https://www.youtube.com/playlist?list=PLSZbtIlMt5rcbXOpMRucKzRMXR7HX7awy)
+- [Getting started with InSpec - The InSpec basics series](http://www.anniehedgie.com/inspec/)
+- [Windows infrastructure testing using InSpec – Part I](http://datatomix.com/?p=236)
+- [Windows infrastructure testing using InSpec and Profiles – Part II](http://datatomix.com/?p=238)
+### rspec documentation
 
-## nginx_output.json
+- [Explicit Subject](https://relishapp.com/rspec/rspec-core/docs/subject/explicit-subject)
+- [should and should_not](https://github.com/rspec/rspec-expectations/blob/master/Should.md)
+- [Built in matchers](https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
+## Codespaces and Git
+### Learning and Using Git
 
-This is an example scan of a semi-hardened CentOS 6 NGINX box using the MITRE NGINX Basline. You can use this to explore Heimdall Lite and Heimdall.
+- [Git Primer & Introduction](https://www.youtube.com/watch?v=8JJ101D3knE)
+- [Git Command Documentation](https://git-scm.com/docs/gittutorial)
+- [Create a Pull Request](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)
+### GitHub Codespaces
 
-- [nginx_output.json](./nginx_output.json)
+- [GitHub CodeSpaces Video Introduction](https://www.youtube.com/watch?v=fQbH3meWNQ8)
+
+- [GitHub Codespaces Overview](https://docs.github.com/en/codespaces/overview)
+## Tools and Applications
+
+- [InSpec](https://www.inspec.io)
+- [SAF CLI](https://saf-cli.mitre.org)
+- [CINC](https://cinc.sh)
+- [VSCode](https://code.visualstudio.com/download)
+## RHEL8 Baseline 'Stubs'
+
+The RHEL8 Baseline Stubs were `saf-cli generate` command as documented in [Section 10](../course/10.md) . You can use this as a reference while you develop your controls.
+
+- [rhel8-baseline-stubs.tar.gz](./rhel8-baseline-stubs.tar.gzvim )
+
+### Generating the Stubs
+
+To create the RedHat Enterprise Linux 8 STIG Profile stubs, we used the `saf-cli generate` command:
+```sh
+saf generate:xccdf2inspec_stub -i U_RHEL_8_STIG_V1R6_Manual-xccdf.xml -r -o rhel8-baseline-stubs
+```
+This created a starter profile based of the RHEL8 STIG XCCDF Bechmark
+
+[asdlfkj](./rhel8-baseline-stubs/)
+## MITRE SAF InSpec Profiles
+
+- [MITRE InSpec Profile Repositories](https://github.com/mitre?q=inspec+baseline+profile)
+## DOD STIGs and Benchmarks
+### DISA STIGs
+
+- [DISA Cyber.mil STIG Downlaods](https://public.cyber.mil/stigs/downloads/)
+- RHEL8 STIG - public.cyber.mil
+### STIG and SRG Aligned Profiles
+
+- RHEL8 InSpec Profile
+- Webserver SRG docs - public.cyber
+- nginx-srg-baseline-proifle
+### CIS Benchmarks and Profiles
+
+- [Center for Internet Security Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+## Chef Community Slack
+
+- <http://community-slack.chef.io/>
