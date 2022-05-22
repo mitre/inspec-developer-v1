@@ -19,6 +19,6 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "github": "cross-env GITHUB_DEPLOY='true' vuepress build docs"
+    "docs:github": "cross-env GITHUB_DEPLOY='true' vuepress build docs"
   }
 }
