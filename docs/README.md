@@ -10,6 +10,13 @@ footer: Apache-2.0 | Copyright © 2022 - The MITRE Corporation
   <h3><strong>Suggested Pre-Requisites</strong></h3><p>Basic familiarity with Ruby, RSpec and InSpec. InSpec is a DSL built on top of Ruby and RSpec. To become more familiar with Ruby, review the following this <a href="https://ruby-for-beginners.rubymonstas.org/">written ruby primer</a> and or <a href="https://www.youtube.com/watch?v=t_ispmWmdjY&vl=en">a basic video introduction</a> to get started.</p>
 </div>
 
+<div style="text-align: center">
+  <Bit/>
+  <h3><strong>InSpec Developer Codespaces Lab</strong></h3><p>The MITRE SAF has setup a GitHub Codespace that can function as your lab and testing environment while you take this course.</p>
+  <a href="https://github.com/mitre/inspec-profile-developer-course-lab-environment" alt text="InSpec Profile Developers Codespaces Lab">https://github.com/mitre/inspec-profile-developer-course-lab-environment</a>
+  <p>Follow the instructions on the README or just follow along with your instructor as we will be walking the class through the setup process.
+</div>
+
 <div class="features">
   <div class="feature">
     <h2>Describe the architecture of an InSpec profile</h2>

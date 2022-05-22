@@ -52,7 +52,7 @@ saf generate:xccdf2inspec_stub -i U_RHEL_8_STIG_V1R6_Manual-xccdf.xml -r -o rhel
 ```
 This created a starter profile based of the RHEL8 STIG XCCDF Bechmark
 
-- [rhel8-baseline-stubs.tar.gz](/rhel8-baseline-stubs.tar.gz)
+- [rhel8-baseline-stubs.tar.gz](https://github.com/mitre/inspec-profile-developer-course-lab-environment/raw/main/resources/rhel8-baseline-stubs.tar.gz)
 ## MITRE SAF InSpec Profiles
 
 - [MITRE InSpec Profile Repositories](https://github.com/mitre?q=inspec+baseline+profile)
