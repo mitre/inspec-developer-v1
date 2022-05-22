@@ -63,12 +63,12 @@ This created a starter profile based of the RHEL8 STIG XCCDF Bechmark
 ### DISA STIGs
 
 - [DISA Cyber.mil STIG Downlaods](https://public.cyber.mil/stigs/downloads/)
-- RHEL8 STIG - public.cyber.mil
+
 ### STIG and SRG Aligned Profiles
 
-- RHEL8 InSpec Profile
-- Webserver SRG docs - public.cyber
-- nginx-srg-baseline-proifle
+- <https://github.com/CMSgov/redhat-enterprise-linux-8-stig-baseline>
+
+- <https://github.com/mitre/nginx-srg-baseline>
 ### CIS Benchmarks and Profiles
 
 - [Center for Internet Security Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
