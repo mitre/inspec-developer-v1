@@ -44,9 +44,6 @@
 ## RHEL8 Baseline 'Stubs'
 
 The RHEL8 Baseline Stubs were `saf-cli generate` command as documented in [Section 10](../course/10.md) . You can use this as a reference while you develop your controls.
-
-- [rhel8-baseline-stubs.tar.gz](/rhel8-baseline-stubs.tar.gz)
-
 ### Generating the Stubs
 
 To create the RedHat Enterprise Linux 8 STIG Profile stubs, we used the `saf-cli generate` command:
@@ -54,6 +51,8 @@ To create the RedHat Enterprise Linux 8 STIG Profile stubs, we used the `saf-cli
 saf generate:xccdf2inspec_stub -i U_RHEL_8_STIG_V1R6_Manual-xccdf.xml -r -o rhel8-baseline-stubs
 ```
 This created a starter profile based of the RHEL8 STIG XCCDF Bechmark
+
+- [rhel8-baseline-stubs.tar.gz](/rhel8-baseline-stubs.tar.gz)
 ## MITRE SAF InSpec Profiles
 
 - [MITRE InSpec Profile Repositories](https://github.com/mitre?q=inspec+baseline+profile)
