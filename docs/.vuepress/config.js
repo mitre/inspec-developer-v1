@@ -87,7 +87,7 @@ module.exports = {
     },
     // options for markdown-it-toc
     toc: {
-      includeLevel: [1, 2],
+      includeLevel: [1, 2, 3, 4],
     },
   },
 };
