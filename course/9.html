@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>9. Profile Inheritance and Overlays | InSpec Profile Developers Course</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="The MITRE InSpec Team&#39;s introduction to InSpec Profile Development">
+    
+    <link rel="preload" href="/inspec-developer/assets/css/0.styles.8a73f461.css" as="style"><link rel="preload" href="/inspec-developer/assets/js/app.7d79d2ea.js" as="script"><link rel="preload" href="/inspec-developer/assets/js/2.fb9f3b04.js" as="script"><link rel="preload" href="/inspec-developer/assets/js/25.89b245b5.js" as="script"><link rel="prefetch" href="/inspec-developer/assets/js/10.9f2a48b6.js"><link rel="prefetch" href="/inspec-developer/assets/js/11.3f10e607.js"><link rel="prefetch" href="/inspec-developer/assets/js/12.2c54c5b2.js"><link rel="prefetch" href="/inspec-developer/assets/js/13.2d2829d7.js"><link rel="prefetch" href="/inspec-developer/assets/js/14.afa40c96.js"><link rel="prefetch" href="/inspec-developer/assets/js/15.1755bca0.js"><link rel="prefetch" href="/inspec-developer/assets/js/16.3b64e1db.js"><link rel="prefetch" href="/inspec-developer/assets/js/17.0ae77dc9.js"><link rel="prefetch" href="/inspec-developer/assets/js/18.59ee93f4.js"><link rel="prefetch" href="/inspec-developer/assets/js/19.ac409da4.js"><link rel="prefetch" href="/inspec-developer/assets/js/20.e14567f9.js"><link rel="prefetch" href="/inspec-developer/assets/js/21.02c647c0.js"><link rel="prefetch" href="/inspec-developer/assets/js/22.0df2a838.js"><link rel="prefetch" href="/inspec-developer/assets/js/23.01daa5e7.js"><link rel="prefetch" href="/inspec-developer/assets/js/24.6902a542.js"><link rel="prefetch" href="/inspec-developer/assets/js/26.5a383699.js"><link rel="prefetch" href="/inspec-developer/assets/js/27.3994ba0a.js"><link rel="prefetch" href="/inspec-developer/assets/js/28.6658fa31.js"><link rel="prefetch" href="/inspec-developer/assets/js/29.a9ef1e9e.js"><link rel="prefetch" href="/inspec-developer/assets/js/3.27e58ff9.js"><link rel="prefetch" href="/inspec-developer/assets/js/30.34654713.js"><link rel="prefetch" href="/inspec-developer/assets/js/4.129956aa.js"><link rel="prefetch" href="/inspec-developer/assets/js/5.55b1ac70.js"><link rel="prefetch" href="/inspec-developer/assets/js/6.1416f2d5.js"><link rel="prefetch" href="/inspec-developer/assets/js/7.55d4d3c0.js"><link rel="prefetch" href="/inspec-developer/assets/js/8.fe08e3d8.js"><link rel="prefetch" href="/inspec-developer/assets/js/9.15212c20.js">
+    <link rel="stylesheet" href="/inspec-developer/assets/css/0.styles.8a73f461.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/inspec-developer/" class="home-link router-link-active"><!----> <span class="site-name">InSpec Profile Developers Course</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/inspec-developer/course/" class="nav-link router-link-active">
+  Course
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Install" class="dropdown-title"><span class="title">Install</span> <span class="arrow down"></span></button> <button type="button" aria-label="Install" class="mobile-dropdown-title"><span class="title">Install</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/LinuxInstall.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/MacInstall.html" class="nav-link">
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/WindowsInstall.html" class="nav-link">
+  Windows
+</a></li></ul></div></div><div class="nav-item"><a href="/inspec-developer/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="/inspec-developer/contact/" class="nav-link">
+  Contact
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/inspec-developer/course/" class="nav-link router-link-active">
+  Course
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Install" class="dropdown-title"><span class="title">Install</span> <span class="arrow down"></span></button> <button type="button" aria-label="Install" class="mobile-dropdown-title"><span class="title">Install</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/LinuxInstall.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/MacInstall.html" class="nav-link">
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/inspec-developer/installation/WindowsInstall.html" class="nav-link">
+  Windows
+</a></li></ul></div></div><div class="nav-item"><a href="/inspec-developer/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="/inspec-developer/contact/" class="nav-link">
+  Contact
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/inspec-developer/course/" aria-current="page" class="sidebar-link">1. About InSpec</a></li><li><a href="/inspec-developer/course/2.html" class="sidebar-link">2. Starting the Journey</a></li><li><a href="/inspec-developer/course/3.html" class="sidebar-link">3. Studying an InSpec profile</a></li><li><a href="/inspec-developer/course/4.html" class="sidebar-link">4. Exploring the InSpec Shell</a></li><li><a href="/inspec-developer/course/5.html" class="sidebar-link">5. Writting the InSpec Controls</a></li><li><a href="/inspec-developer/course/6.html" class="sidebar-link">6. Generating Results</a></li><li><a href="/inspec-developer/course/7.html" class="sidebar-link">7. Viewing and Analyzing Results</a></li><li><a href="/inspec-developer/course/8.html" class="sidebar-link">8. Inspec Examples</a></li><li><a href="/inspec-developer/course/9.html" aria-current="page" class="active sidebar-link">9. Profile Inheritance and Overlays</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-profile-inheritance-and-overlays" class="sidebar-link">9. Profile Inheritance and Overlays</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-1-defining-the-dependency" class="sidebar-link">9.1. Defining the dependency</a></li><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-2-including-all-controls-from-a-profile" class="sidebar-link">9.2. Including All Controls from a Profile</a></li><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-3-skipping-a-control-from-profile" class="sidebar-link">9.3. Skipping a control from profile</a></li><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-4-modifying-a-control" class="sidebar-link">9.4. Modifying a Control</a></li><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-5-selectively-including-controls-from-a-profile" class="sidebar-link">9.5. Selectively Including Controls from a Profile</a></li><li class="sidebar-sub-header"><a href="/inspec-developer/course/9.html#_9-6-additional-examples" class="sidebar-link">9.6. Additional examples</a></li></ul></li></ul></li><li><a href="/inspec-developer/course/10.html" class="sidebar-link">10. From STIG to Profile</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_9-profile-inheritance-and-overlays"><a href="#_9-profile-inheritance-and-overlays" class="header-anchor">#</a> 9. Profile Inheritance and Overlays</h2> <p>In addition to its own controls, an InSpec profile can bring in the controls from another InSpec profile. Additionally, when inheriting the controls of another profile, a profile can skip or even modify those included controls.</p> <p>When a profile includes controls from another profile, it is usually referred to as a “meta profile” or a “profile overlay.” Those of us with Chef background sometimes call it a “wrapper profile”.</p> <div class="custom-block tip"><p class="custom-block-title">Further information on inheritance</p> <p>You can find out more about inhertiance here <a href="https://www.inspec.io/docs/reference/profiles/#sts=Profile%20Dependencies" target="_blank" rel="noopener noreferrer">https://www.inspec.io/docs/reference/profiles/#sts=Profile%20Dependencies<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <h3 id="_9-1-defining-the-dependency"><a href="#_9-1-defining-the-dependency" class="header-anchor">#</a> 9.1. Defining the dependency</h3> <p>Before a profile can use controls from another profile, the to-be-included profile needs to be specified in the including profile’s inspec.yml file in the depends section. For each profile to be included, a location for the profile from where to be fetched and a name for the profile should be included. For example:</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">depends</span><span class="token punctuation">:</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> linux<span class="token punctuation">-</span>baseline
+   <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/dev<span class="token punctuation">-</span>sec/linux<span class="token punctuation">-</span>baseline/archive/master.tar.gz
+ <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> ssh<span class="token punctuation">-</span>baseline
+   <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/dev<span class="token punctuation">-</span>sec/ssh<span class="token punctuation">-</span>baseline/archive/master.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Once defined in the inspec.yml, controls from the included profiles can be used!</p> <h3 id="_9-2-including-all-controls-from-a-profile"><a href="#_9-2-including-all-controls-from-a-profile" class="header-anchor">#</a> 9.2. Including All Controls from a Profile</h3> <p>With the include_controls command in a profile, all controls from the named profile will be executed every time the including profile is executed.</p> <p><code>my_nginx</code> profile</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token string-literal"><span class="token string">'nginx-version'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX version'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required version of NGINX should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-modules'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX modules'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required NGINX modules should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-conf'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX configuration'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The NGINX config file should owned by root, be writable only by owner, and not writeable or and readable by others.'</span></span>
+<span class="token keyword">end</span>
+
+include_controls <span class="token command-literal"><span class="token command string">`my_nginx_overlay`</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><code>my_nginx_overlay</code></p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>In the example above, every time <code>my_nginx</code> profile is executed, all the controls from <code>my_nginx_overlay</code> are also executed. Therefore, the following controls would be executed:</p> <ul><li>nginx-version</li> <li>nginx-modules</li> <li>nginx-conf</li> <li>first-overlay-control</li> <li>second-overlay-control</li></ul> <h3 id="_9-3-skipping-a-control-from-profile"><a href="#_9-3-skipping-a-control-from-profile" class="header-anchor">#</a> 9.3. Skipping a control from profile</h3> <p>What if one of the controls from the included profile does not apply to your environment? Luckily, it is not necessary to maintain a slightly-modified copy of the included profile just to delete a control. The skip_control command tells InSpec to not run a particular control.</p> <p><code>my_nginx</code> profile</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token string-literal"><span class="token string">'nginx-version'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX version'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required version of NGINX should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-modules'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX modules'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required NGINX modules should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-conf'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX configuration'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The NGINX config file should owned by root, be writable only by owner, and not writeable or and readable by others.'</span></span>
+<span class="token keyword">end</span>
+
+include_controls <span class="token command-literal"><span class="token command string">`my_nginx_overlay`</span></span> <span class="token keyword">do</span>
+  skip_control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p><code>my_nginx_overlay</code></p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>In the above example, all controls from <code>my_nginx</code> profile and <code>my_nginx_overlay</code> profile will be executed every time my-app-profile is executed <strong>except</strong> for control <code>second-overlay-control</code> from the <code>my_nginx_overlay</code> profile.</p> <h3 id="_9-4-modifying-a-control"><a href="#_9-4-modifying-a-control" class="header-anchor">#</a> 9.4. Modifying a Control</h3> <p>Let’s say a particular control from an included profile should still be run, but the impact isn’t appropriate? Perhaps the test should still run, but if it fails it should be treated as low severity instead of high severity?</p> <p>When a control is included, it can also be modified!</p> <p><code>my_nginx</code> profile</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token string-literal"><span class="token string">'nginx-version'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX version'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required version of NGINX should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-modules'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX modules'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required NGINX modules should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-conf'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX configuration'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The NGINX config file should owned by root, be writable only by owner, and not writeable or and readable by others.'</span></span>
+<span class="token keyword">end</span>
+
+include_controls <span class="token command-literal"><span class="token command string">`my_nginx_overlay`</span></span> <span class="token keyword">do</span>
+  control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span> <span class="token keyword">do</span>
+    impact <span class="token number">0.5</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p><code>my_nginx_overlay</code></p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+<span class="token keyword">end</span>
+control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>In the above example, all controls from <code>my_nginx</code> profile are executed along with all the controls from the including profile, <code>my_nginx_overlay</code>. However, should control <code>second-overlay-control</code> fail, it will be raised with an impact of <code>0.5</code> instead of the originally-intended impact of <code>1.0</code>.</p> <h3 id="_9-5-selectively-including-controls-from-a-profile"><a href="#_9-5-selectively-including-controls-from-a-profile" class="header-anchor">#</a> 9.5. Selectively Including Controls from a Profile</h3> <p>If there are only a handful of controls that should be executed from an included profile, it’s not necessary to skip all the unneeded controls, or worse, copy/paste those controls bit-for-bit into your profile. Instead, use the require_controls command.</p> <p><code>my_nginx</code> profile</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token string-literal"><span class="token string">'nginx-version'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX version'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required version of NGINX should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-modules'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX modules'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required NGINX modules should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-conf'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX configuration'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The NGINX config file should owned by root, be writable only by owner, and not writeable or and readable by others.'</span></span>
+<span class="token keyword">end</span>
+
+require_controls <span class="token command-literal"><span class="token command string">`my_nginx_overlay`</span></span> <span class="token keyword">do</span>
+  control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span>
+  control <span class="token command-literal"><span class="token command string">`third-overlay-control`</span></span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p><code>my_nginx_overlay</code></p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`third-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`fourth-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`fifth-overlay-control`</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Whenever <code>my_nginx</code> is executed, in addition to its own controls, it will run only the controls specified in the require_controls block. In the case, the following controls would be executed:</p> <ul><li>nginx-version</li> <li>nginx-modules</li> <li>nginx-conf</li> <li>first-overlay-control</li> <li>third-overlay-control</li></ul> <p>Controls <code>second-overlay-control</code>, <code>fourth-overlay-control</code>, and <code>fifth-overlay-control</code> would not be run, just as if they were manually skipped. This method of including specific controls ensures only the controls specified are executed; if new controls are added to a later version of <code>my_nginx_overlay</code>, they would not be run.</p> <p>And, just the way its possible to modify controls when using include_controls, controls can be modified as well.</p> <p><code>my_nginx</code> profile</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token string-literal"><span class="token string">'nginx-version'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX version'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required version of NGINX should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-modules'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX modules'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The required NGINX modules should be installed.'</span></span>
+<span class="token keyword">end</span>
+
+control <span class="token string-literal"><span class="token string">'nginx-conf'</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+  title <span class="token string-literal"><span class="token string">'NGINX configuration'</span></span>
+  desc <span class="token string-literal"><span class="token string">'The NGINX config file should owned by root, be writable only by owner, and not writeable or and readable by others.'</span></span>
+<span class="token keyword">end</span>
+
+require_controls <span class="token command-literal"><span class="token command string">`my_nginx_overlay`</span></span> <span class="token keyword">do</span>
+  control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span> <span class="token keyword">do</span>
+    impact <span class="token number">0.5</span>
+  <span class="token keyword">end</span>
+  control <span class="token command-literal"><span class="token command string">`third-overlay-control`</span></span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><code>my_nginx_overlay</code></p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>control <span class="token command-literal"><span class="token command string">`first-overlay-control`</span></span> <span class="token keyword">do</span>
+  impact <span class="token number">1.0</span>
+<span class="token keyword">end</span>
+
+control <span class="token command-literal"><span class="token command string">`second-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`third-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`fourth-overlay-control`</span></span>
+control <span class="token command-literal"><span class="token command string">`fifth-overlay-control`</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>As with the prior example, only <code>first-overlay-control</code> and <code>third-overlay-control</code> are executed, but if <code>first-overlay-control</code> fails, it will report with an impact of <code>0.5</code> instead of the originally-intended <code>1.0</code> impact.</p> <h3 id="_9-6-additional-examples"><a href="#_9-6-additional-examples" class="header-anchor">#</a> 9.6. Additional examples</h3> <ul><li><a href="https://github.com/mitre/helloworld-web-baseline" target="_blank" rel="noopener noreferrer">https://github.com/mitre/helloworld-web-baseline<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/chris-rock/acme-inspec-profile" target="_blank" rel="noopener noreferrer">https://github.com/chris-rock/acme-inspec-profile<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline" target="_blank" rel="noopener noreferrer">https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/inspec-developer/course/8.html" class="prev">
+        8. Inspec Examples
+      </a></span> <span class="next"><a href="/inspec-developer/course/10.html">
+        10. From STIG to Profile
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/inspec-developer/assets/js/app.7d79d2ea.js" defer></script><script src="/inspec-developer/assets/js/2.fb9f3b04.js" defer></script><script src="/inspec-developer/assets/js/25.89b245b5.js" defer></script>
+  </body>
+</html>
